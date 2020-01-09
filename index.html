@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>キレイなAmazon アフィリエイトリンクジェネレーター | Amazon Ad Generator</title>
+	<meta name="description" content="キレイなAmazon アフィリエイトリンクジェネレーター | Generate better Amazon Ad">
+	<meta property="og:site_name" content="キレイなAmazon アフィリエイトリンクジェネレーター | Amazon Ad Generator">
+	<meta property="og:title" content="キレイなAmazon アフィリエイトリンクジェネレーター | Amazon Ad Generator">
+	<meta property="og:description" content="キレイなAmazon アフィリエイトリンクジェネレーター | Generate better Amazon Ad">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="#">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="#">
+    <style>
+	    input[type="text"] {
+			width: 100%;
+	    }
+
+	    code .af_name {
+	        font-size: 12px;
+	        font-weight: normal;
+	        margin-bottom: 0;
+	    }
+
+	    code .af_desc {
+	        font-size: 12px;
+	        margin-bottom: 0;
+	    }
+
+	    .af_box {
+	        border-radius: 5px;
+	        -moz-border-radius: 5px;
+	        -webkit-border-radius: 5px;
+	        border: 1px solid #d1d1d1;
+	        font-size: 12px;
+	        padding: 1em;
+	        margin: 1em;
+	    }
+
+	    .af_box:after {
+	        content: "";
+	        display: table;
+	        clear: both;
+	    }
+
+	    .af_imgbox {
+		    width: 160px;
+	        margin-right: 1em;
+	        float: left;
+	        text-align: center;
+	    }
+
+	    .af_imgbox img {
+	        display: block;
+	        height: auto;
+	        max-width: 100%;
+	    }
+
+	    .af_textbox {
+	        width: 100%;
+	    }
+
+	    .af_note {
+	        font-weight: bolder;
+	        color: #8e8e8e;
+	        margin-bottom: 1em;
+	    }
+
+	    .af_name {
+	        font-size: 1.3em;
+	        font-weight: bolder;
+	        margin-bottom: .8em;
+	    }
+
+	    .af_desc {
+	        font-size: 1.2em;
+	        margin-bottom: 1em;
+	    }
+
+	    .af_kobox {
+	        float: left;
+	        text-align: center;
+	    }
+
+	    .af_kobox a#af_btn {
+	        color: #F3A847;
+	        border: 1px solid #F3A847;
+	        display: block;
+	        font-size: 1.2em;
+	        padding: .5em .8em;
+	        font-weight: bolder;
+	        border-radius: 5px;
+	        -moz-border-radius: 5px;
+	        -webkit-border-radius: 5px;
+	        text-decoration: none;
+	    }
+    </style>
+</head>
+
+<body>
+	<img src="img.jpg" alt="キレイなAmazon アフィリエイトリンクジェネレーター">
+    <p>ソースコード一部引用：<a href="https://www.iscle.com/web-it/kaereba-css.html" target="_blank">収益増加！カエレバより綺麗なアフィリエイトリンクをコピペで設定</a></p>
+    <h2>内容を入力 / Input infos</h2>
+    <form id="af_maker">
+        <h3>商品名 / Product name</h3>
+        <input type="text" id="p_name">
+        <h3>説明文 / Description</h3>
+        <input type="text" id="p_desc">
+        <h3>商品URL / Product URL</h3>
+        <p>Amazonアソシエイトツールで作ったURLを入力。<br>Input the URL made by your Amazon Associate Tool.</p>
+        <input type="text" id="p_url">
+        <h3>画像URL / Image URL</h3>
+        <input type="text" id="p_img">
+        <h3>プレビュー・コード生成 / Generate</h3>
+        <input type="button" onclick="func()" value="作成 / Generate">
+        <input type="reset" value="リセット / Reset">
+    </form>
+    <h2>プレビュー</h2>
+    <div class="af_box">
+        <div class="af_note">Sponsored Link</div>
+        <div class="af_imgbox">
+            <a class="af_url" href="" target="_blank"><img class="af_img" src=""></a>
+        </div>
+        <div class="af_textbox">
+            <div class="af_name"></div>
+            <div class="af_desc"></div>
+            <div class="af_kobox af_amazon"><a class="af_url" href="" target="_blank" id="af_btn">Amazon</a></div>
+        </div>
+    </div>
+    <h2>ソースコード / Code</h2>
+    <p>もしよかったらコピペして使ってください。 / Copy & Paste the codes below!</p>
+    <h3>HTML</h3>
+    <pre>
+		<code>
+&lt;div class=&quot;af_box&quot;&gt;
+    &lt;div class=&quot;af_note&quot;&gt;Sponsored Link&lt;/div&gt;
+    &lt;div class=&quot;af_imgbox&quot;&gt;
+        &lt;a class=&quot;af_url&quot; href=&quot;<span class="code_url"></span>&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;<span class="code_image"></span>&quot; alt=&quot;&quot;&gt;&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;af_textbox&quot;&gt;
+        &lt;div class=&quot;af_name&quot;&gt;<span class="af_name"></span>&lt;/div&gt;
+        &lt;div id=&quot;af_desc&quot;&gt;<span class="af_desc"></span>&lt;/div&gt;
+        &lt;div class=&quot;af_kobox af_amazon&quot;&gt;&lt;a class=&quot;af_url&quot; href=&quot;<span class="code_url"></span>&quot; target=&quot;_blank&quot; id=&quot;af_btn&quot;&gt;Amazon&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+		</code>
+	</pre>
+    <h3>CSS</h3>
+    <pre>
+		<code>
+.af_box {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #d1d1d1;
+    font-size: 12px;
+    padding: 1em;
+    margin: 1em;
+}
+
+.af_box:after {
+    content: &quot;&quot;;
+    display: table;
+    clear: both;
+}
+
+.af_imgbox {
+    width: 160px;
+    margin-right: 1em;
+    float: left;
+    text-align: center;
+}
+
+.af_imgbox img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.af_textbox {
+    width: 100%;
+}
+
+.af_note {
+    font-weight: bolder;
+    color: #8e8e8e;
+    margin-bottom: 1em;
+}
+
+.af_name {
+    font-size: 1.3em;
+    font-weight: bolder;
+    margin-bottom: .8em;
+}
+
+.af_desc {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.af_kobox {
+    float: left;
+    text-align: center;
+}
+
+.af_kobox a#af_btn {
+    color: #F3A847;
+    border: 1px solid #F3A847;
+    display: block;
+    font-size: 1.2em;
+    padding: .5em .8em;
+    font-weight: bolder;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    text-decoration: none;
+}
+		</code>
+	</pre>
+	<p>Copyright &copy; <a href="https://jentagawa.github.io/asunaro/" target="_blank">翌檜日記</a> All Rights Reserved.</p>
+    <script language="javascript" type="text/javascript">
+    function func() {
+        var p_name = document.getElementById("p_name").value;
+        var p_name_target = document.getElementsByClassName("af_name");
+        var p_name_target = Array.from(p_name_target);
+        for (var i = 0; i < p_name_target.length; ++i) {
+            p_name_target[i].innerHTML = p_name;
+        }
+
+        var p_desc = document.getElementById("p_desc").value;
+        var p_desc_target = document.getElementsByClassName("af_desc");
+        var p_desc_target = Array.from(p_desc_target);
+        for (var i = 0; i < p_desc_target.length; ++i) {
+            p_desc_target[i].innerHTML = p_desc;
+        }
+
+        var p_url = document.getElementById("p_url").value;
+        var p_ul_target = document.getElementsByClassName("af_url");
+        var p_ul_target = Array.from(p_ul_target);
+        p_ul_target.forEach(function(value) {
+            value.href = p_url;
+        });
+        var code_url_target = document.getElementsByClassName("code_url");
+        var code_url_target = Array.from(code_url_target);
+        for (var i = 0; i < code_url_target.length; ++i) {
+            code_url_target[i].innerHTML = p_url;
+        }
+
+        var p_img = document.getElementById("p_img").value;
+        var p_img_target = document.getElementsByClassName("af_img");
+        var p_img_target = Array.from(p_img_target);
+        p_img_target.forEach(function(value) {
+            value.src = p_img;
+        });
+        var code_image_target = document.getElementsByClassName("code_image");
+        var code_image_target = Array.from(code_image_target);
+        for (var i = 0; i < code_image_target.length; ++i) {
+            code_image_target[i].innerHTML = p_img;
+        }
+    }
+    </script>
+</body>
+
+</html>
