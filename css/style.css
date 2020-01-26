@@ -1,0 +1,144 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: #FFF;
+    overflow-x: hidden;
+    color: #333;
+    font-family: YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+    letter-spacing: 0.1em;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-feature-settings: 'palt'1;
+    font-feature-settings: 'palt'1;
+}
+
+@media only screen and (min-width: 750px) {
+	.wrapper {
+	    width: 1148px;
+	    margin: 0 auto 80px;
+	}
+}
+
+.wrapper {
+	    padding: 0 20px;
+	    margin-bottom: 80px;
+	}
+
+h2 {
+	margin-top: 2em;
+}
+
+h3 {
+	margin-bottom: 0em;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+input[type="text"] {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+#p_img {
+    margin-bottom: 0;
+}
+
+form {
+    margin-bottom: 2em;
+}
+
+pre .af_name {
+    font-size: 12px;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+pre .af_desc {
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.af_box {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #d1d1d1;
+    font-size: 12px;
+    padding: 1em;
+    margin: 1em;
+}
+
+.af_box:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.af_imgbox {
+    width: 160px;
+    margin-right: 1em;
+    float: left;
+    text-align: center;
+}
+
+.af_imgbox img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.af_textbox {
+    width: 100%;
+}
+
+.af_note {
+    font-weight: bolder;
+    color: #8e8e8e;
+    margin-bottom: 1em;
+}
+
+.af_name {
+    font-size: 1.3em;
+    font-weight: bolder;
+    margin-bottom: .8em;
+}
+
+.af_desc {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.af_kobox {
+    float: left;
+    text-align: center;
+}
+
+.af_kobox a#af_btn {
+    color: #F3A847;
+    border: 1px solid #F3A847;
+    display: block;
+    font-size: 1.2em;
+    padding: .5em .8em;
+    font-weight: bolder;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    text-decoration: none;
+}
+
+footer {
+	text-align: center;
+}
