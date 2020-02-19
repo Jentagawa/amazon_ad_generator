@@ -1,39 +1,45 @@
 function func() {
-    var p_name = document.getElementById("p_name").value;
-    var p_name_target = document.getElementsByClassName("af_name");
-    var p_name_target = Array.from(p_name_target);
-    for (var i = 0; i < p_name_target.length; ++i) {
-        p_name_target[i].innerHTML = p_name;
+    function addValue(id, name) {
+        var former_id = document.getElementById(id).value;
+        var target = document.getElementsByClassName(name);
+        var target = Array.from(target);
+        for (var i = 0; i < target.length; ++i) {
+            target[i].innerHTML = former_id;
+        }
     }
 
-    var p_desc = document.getElementById("p_desc").value;
-    var p_desc_target = document.getElementsByClassName("af_desc");
-    var p_desc_target = Array.from(p_desc_target);
-    for (var i = 0; i < p_desc_target.length; ++i) {
-        p_desc_target[i].innerHTML = p_desc;
+    addValue("p_name", "af_name");
+    addValue("p_desc", "af_desc");
+
+    function addUrl(id, name, url) {
+        var former_id = document.getElementById(id).value;
+        var target = document.getElementsByClassName(name);
+        var target = Array.from(target);
+        target.forEach(function(value) {
+            value.href = former_id;
+        });
+        var url_target = document.getElementsByClassName(url);
+        var url_target = Array.from(url_target);
+        for (var i = 0; i < url_target.length; ++i) {
+            url_target[i].innerHTML = former_id;
+        }
     }
 
-    var p_url = document.getElementById("p_url").value;
-    var p_ul_target = document.getElementsByClassName("af_url");
-    var p_ul_target = Array.from(p_ul_target);
-    p_ul_target.forEach(function(value) {
-        value.href = p_url;
-    });
-    var code_url_target = document.getElementsByClassName("code_url");
-    var code_url_target = Array.from(code_url_target);
-    for (var i = 0; i < code_url_target.length; ++i) {
-        code_url_target[i].innerHTML = p_url;
-    }
+    addUrl("p_url", "af_url", "code_url");
 
-    var p_img = document.getElementById("p_img").value;
-    var p_img_target = document.getElementsByClassName("af_img");
-    var p_img_target = Array.from(p_img_target);
-    p_img_target.forEach(function(value) {
-        value.src = p_img;
-    });
-    var code_image_target = document.getElementsByClassName("code_image");
-    var code_image_target = Array.from(code_image_target);
-    for (var i = 0; i < code_image_target.length; ++i) {
-        code_image_target[i].innerHTML = p_img;
+        function addSrc(id, name, url) {
+        var former_id = document.getElementById(id).value;
+        var target = document.getElementsByClassName(name);
+        var target = Array.from(target);
+        target.forEach(function(value) {
+            value.src = former_id;
+        });
+        var url_target = document.getElementsByClassName(url);
+        var url_target = Array.from(url_target);
+        for (var i = 0; i < url_target.length; ++i) {
+            url_target[i].innerHTML = former_id;
+        }
     }
+    
+    addSrc("p_img", "af_img", "code_image");
 }
